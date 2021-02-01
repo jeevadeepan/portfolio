@@ -72,6 +72,20 @@
         .timer-time {
             font-size: 6.3125rem;
         }
+        .timer-trigger-btn {
+            font-size: 1rem;
+            letter-spacing: 15px;
+            text-transform: uppercase;
+            background: transparent;
+            color: inherit;
+            font-family: "kumbh sans";
+            border: none;
+            z-index: 1;
+            cursor: pointer;
+            &:hover {
+                letter-spacing: 20px;
+            }
+        }
     }
     display: flex;
     align-items: center;

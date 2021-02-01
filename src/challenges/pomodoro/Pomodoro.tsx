@@ -17,7 +17,7 @@ function Pomodoro() {
         <div className="inner-container">
           <ProgressRing radius={ 169.5 } stroke={ 8 } progress={ 80 } />
           <span className="timer-time">25:00</span>
-          <span className="timer-status">start</span>
+          <button className="timer-trigger-btn">start</button>
         </div>
       </div>
 
