@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './ProgressRing.scss';
 
 function ProgressRing(props: any) {
     const { radius, stroke, progress } = props;

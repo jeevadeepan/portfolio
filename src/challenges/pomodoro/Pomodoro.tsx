@@ -1,6 +1,7 @@
 import React from 'react';
 import './Pomodoro.scss';
 import ProgressRing from './progressring/ProgressRing';
+import SettingsIcon from './assets/img/icon-settings.svg'
 
 function Pomodoro() {
   return (
@@ -15,11 +16,12 @@ function Pomodoro() {
 
       <div className="timer-display">
         <div className="inner-container">
-          <ProgressRing radius={ 169.5 } stroke={ 8 } progress={ 80 } />
+          <ProgressRing radius={ 169.5 } stroke={ 8 } progress={ 90 } />
           <span className="timer-time">25:00</span>
           <button className="timer-trigger-btn">start</button>
         </div>
       </div>
+      <button className="settings-btn"><img src={SettingsIcon} alt="Settings"/></button>
 
 
       {/* pause
