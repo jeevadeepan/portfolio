@@ -1,0 +1,133 @@
+.pomodoro-app {
+    .pd-settings-overlay {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        z-index: 10;
+        background-color: rgba(10, 12, 28, 0.5);
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .pd-settings {
+        background-color: #ffffff;
+        color: #161932;
+        width: 33.75rem;
+        border-radius: 1.5625rem;
+        font-size: 0.875rem;
+        font-weight: 700;
+        .pd-settings-header {
+            padding: 2.1875rem 2.5rem;
+            border-bottom: 1px solid #e3e1e1;
+            display: flex;
+            #pd-settings-title {
+                font-size: 1.75rem;
+                font-weight: 700;
+                flex-grow: 1;
+            }
+            #pd-settings-close {
+                border: none;
+                background: transparent;
+                color: rgba(30, 33, 63, 0.5);
+                cursor: pointer;
+            }
+        }
+        form {
+            padding: 0 2.5rem;
+            fieldset {
+                padding: 1.5rem 0;
+                &:not(.pd-color-fs) {
+                    border-bottom: 1px solid #e3e1e1;
+                }
+                &:not(:first-child) {
+                    display: flex;
+                    h3 {
+                        flex-grow: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                    ul {
+                        display: flex;
+                        .pd-font-option,
+                        .pd-color-option {
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            border-radius: 50%;
+                            background-color: #eff1fa;
+                            cursor: pointer;
+                            &:not(:last-child) {
+                                margin-right: 1rem;
+                            }
+                        }
+                        .pd-font-option {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            &.selected {
+                                background-color: #161932;
+                                color: #ffffff;
+                            }
+                        }
+                        .pd-color-option {
+                            img {
+                                width: 20px;
+                                height: 20px;
+                                margin: 0 auto;
+                                display: block;
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            #pd-settings-apply-btn {
+                margin: 0 auto;
+                display: block;
+                background-color: #f87070;
+                color: #ffffff;
+                border: none;
+                border-radius: 1.65rem;
+                padding: 1rem 1.6rem;
+                font-weight: bold;
+                font-size: 1rem;
+                width: 8.75rem;
+                position: relative;
+                top: 1.5625rem;
+                cursor: pointer;
+            }
+            h3 {
+                font-size: 0.8125rem;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                font-weight: 700;
+            }
+            .pd-timer-fs {
+                display: flex;
+                flex-direction: column;
+                h3.pd-time-heading {
+                    margin-bottom: 1.5rem;
+                }
+                .pd-timer-container {
+                    display: flex;
+                    label {
+                        color: rgba(30, 33, 63, 0.4);
+                        font-size: 0.75rem;
+                    }
+                    input {
+                        width: 7.75rem;
+                        height: 3rem;
+                        border-radius: 0.625rem;
+                        background-color: #eff1fa;
+                        border: none;
+                        font-weight: 700;
+                        padding-left: 1rem;
+                        margin-right: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+}
