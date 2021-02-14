@@ -3,6 +3,7 @@ import './Pomodoro.scss';
 import ProgressRing from './progressring/ProgressRing';
 import SettingsIcon from './assets/img/icon-settings.svg';
 import Settings from './settings/Settings';
+import Timer from './timer/Timer';
 
 function Pomodoro() {
   const [settingsOpen, setSettingsOpen] = useState(false);
@@ -31,13 +32,14 @@ function Pomodoro() {
         <button className="timer-trigger">long break</button>
       </div>
 
-      <div className="timer-display">
+      {/* <div className="timer-display">
         <div className="inner-container">
           <ProgressRing radius={ 169.5 } stroke={ 8 } progress={ 90 } />
           <span className="timer-time">25:00</span>
           <button className="timer-trigger-btn">start</button>
         </div>
-      </div>
+      </div> */}
+      <Timer time={25}/>
       <button className="settings-btn" onClick={settingsHandler}><img src={SettingsIcon} alt="Settings"/></button>
       {settingsOpen && <Settings closeHandler={setSettingsOpen}/>}
     </div>

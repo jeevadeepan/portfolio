@@ -50,48 +50,48 @@
     margin-bottom: 2.8rem;
 }
 
-.timer-display {
-    width: 25.625rem;
-    height: 25.625rem;
-    border-radius: 50%;
-    background: linear-gradient(-45deg, #2e325a, #0e112a);
-    filter: drop-shadow(-50px -50px 100px #272c5a) drop-shadow(50px 50px 100px #121530);
-    .inner-container {
-        width: 22.875rem;
-        height: 22.875rem;
-        border-radius: 50%;
-        background-color: #161932;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        svg {
-            position: absolute;
-        }
-        .timer-time {
-            font-size: 6.3125rem;
-        }
-        .timer-trigger-btn {
-            font-size: 1rem;
-            letter-spacing: 15px;
-            text-transform: uppercase;
-            background: transparent;
-            color: inherit;
-            font-family: "kumbh sans";
-            border: none;
-            z-index: 1;
-            cursor: pointer;
-            &:hover {
-                letter-spacing: 20px;
-            }
-        }
-    }
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 4rem;
-}
+// .timer-display {
+//     width: 25.625rem;
+//     height: 25.625rem;
+//     border-radius: 50%;
+//     background: linear-gradient(-45deg, #2e325a, #0e112a);
+//     filter: drop-shadow(-50px -50px 100px #272c5a) drop-shadow(50px 50px 100px #121530);
+//     .inner-container {
+//         width: 22.875rem;
+//         height: 22.875rem;
+//         border-radius: 50%;
+//         background-color: #161932;
+//         position: relative;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         flex-direction: column;
+//         svg {
+//             position: absolute;
+//         }
+//         .timer-time {
+//             font-size: 6.3125rem;
+//         }
+//         .timer-trigger-btn {
+//             font-size: 1rem;
+//             letter-spacing: 15px;
+//             text-transform: uppercase;
+//             background: transparent;
+//             color: inherit;
+//             font-family: "kumbh sans";
+//             border: none;
+//             z-index: 1;
+//             cursor: pointer;
+//             &:hover {
+//                 letter-spacing: 20px;
+//             }
+//         }
+//     }
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin-bottom: 4rem;
+// }
 
 .settings-btn {
     background: transparent;
