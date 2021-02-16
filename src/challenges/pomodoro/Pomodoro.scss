@@ -28,7 +28,12 @@
     padding: 0.5rem;
     border-radius: 2rem;
     display: flex;
+    justify-content: space-around;
     z-index: 1;
+    li {
+        z-index: 1;
+        display: flex;
+    }
     .timer-trigger {
         font-size: 0.88rem;
         background-color: transparent;
@@ -36,9 +41,9 @@
         border: none;
         font-weight: bold;
         cursor: pointer;
+        padding: 1rem 1.6rem;
         &.selected {
             background-color: #f87070;
-            padding: 1rem 1.6rem;
             border-radius: 1.65rem;
             color: #1e213f;
             cursor: default;
