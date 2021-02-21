@@ -1,4 +1,6 @@
-import React, { Component, useState } from 'react';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { selectSettings } from '../settings/settingsSlice';
 import './Tabs.scss';
 
 type TabConfig = {
@@ -13,6 +15,7 @@ type TabsProps = {
 function Tabs(props: TabsProps) {
     const [tabSelected, setTabSelected] = useState(0);
     const [tabContent, setTabContent] = useState(props.tabConfig[0].content);
+    const settings = useSelector(selectSettings);
     const tabSelector = (index: number) => {
         setTabSelected(index);
         setTabContent(props.tabConfig[index].content);
@@ -20,7 +23,7 @@ function Tabs(props: TabsProps) {
 
     const getTabClass = (index: number) => {
         if(index === tabSelected) {
-            return 'timer-trigger selected';
+            return `timer-trigger selected ${settings.color}`;
         }
         return 'timer-trigger';
     };

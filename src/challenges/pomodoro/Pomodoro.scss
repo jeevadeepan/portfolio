@@ -1,3 +1,4 @@
+@import 'mixins';
 @font-face {
     font-family: "kumbh sans";
     src: url("./assets/font/KumbhSans-Regular.ttf") format("truetype"),
@@ -5,6 +6,18 @@
         url("./assets/font/KumbhSans-Light.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "space mono";
+    src: url("./assets/font/SpaceMono-Regular.ttf") format("truetype"),
+        url("./assets/font/SpaceMono-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "roboto slab";
+    src: url("./assets/font/RobotoSlab-Regular.ttf") format("truetype"),
+        url("./assets/font/RobotoSlab-Bold.ttf") format("truetype"),
+        url("./assets/font/RobotoSlab-Light.ttf") format("truetype");
+}
 .pomodoro-app {
     width: 100%;
     height: 100%;
@@ -20,6 +33,16 @@
         font-weight: bold;
         font-size: 2rem;
         margin-bottom: 2.8rem;
+    }
+
+    &.kumbhsans{
+        font-family: "kumbh sans", sans-serif;
+    }
+    &.robotoslab {
+        font-family: "roboto slab", sans-serif;
+    }
+    &.spacemono {
+        font-family: "space mono", sans-serif;
     }
 }
 
@@ -40,6 +63,7 @@
         color: rgba(215, 224, 255, 0.4);
         border: none;
         font-weight: bold;
+        font-family: inherit;
         cursor: pointer;
         padding: 1rem 1.6rem;
         &.selected {
@@ -47,6 +71,7 @@
             border-radius: 1.65rem;
             color: #1e213f;
             cursor: default;
+            @include themebg;
         }
         &:not(:last-child) {
             margin-right: 1.2rem;
@@ -54,49 +79,6 @@
     }
     margin-bottom: 2.8rem;
 }
-
-// .timer-display {
-//     width: 25.625rem;
-//     height: 25.625rem;
-//     border-radius: 50%;
-//     background: linear-gradient(-45deg, #2e325a, #0e112a);
-//     filter: drop-shadow(-50px -50px 100px #272c5a) drop-shadow(50px 50px 100px #121530);
-//     .inner-container {
-//         width: 22.875rem;
-//         height: 22.875rem;
-//         border-radius: 50%;
-//         background-color: #161932;
-//         position: relative;
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         flex-direction: column;
-//         svg {
-//             position: absolute;
-//         }
-//         .timer-time {
-//             font-size: 6.3125rem;
-//         }
-//         .timer-trigger-btn {
-//             font-size: 1rem;
-//             letter-spacing: 15px;
-//             text-transform: uppercase;
-//             background: transparent;
-//             color: inherit;
-//             font-family: "kumbh sans";
-//             border: none;
-//             z-index: 1;
-//             cursor: pointer;
-//             &:hover {
-//                 letter-spacing: 20px;
-//             }
-//         }
-//     }
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     margin-bottom: 4rem;
-// }
 
 .settings-btn {
     background: transparent;

@@ -6,7 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import './App.scss';
-import Pomodoro from './challenges/pomodoro/Pomodoro';
+import PomodoroApp from './challenges/pomodoro/PomodoroApp';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/pomodoro">
-            <Pomodoro />
+            <PomodoroApp />
           </Route>
           <Route path="/">
             <nav>

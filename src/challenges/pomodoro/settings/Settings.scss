@@ -1,3 +1,4 @@
+@import '../mixins';
 .pomodoro-app {
     .pd-settings-overlay {
         width: 100%;
@@ -69,6 +70,15 @@
                                 background-color: #161932;
                                 color: #ffffff;
                             }
+                            &.kumbhsans{
+                                font-family: "kumbh sans", sans-serif;
+                            }
+                            &.robotoslab {
+                                font-family: "roboto slab", sans-serif;
+                            }
+                            &.spacemono {
+                                font-family: "space mono", sans-serif;
+                            }
                         }
                         .pd-color-option {
                             img {
@@ -79,6 +89,7 @@
                                 padding-top: 10px;
                                 padding-bottom: 10px;
                             }
+                            @include themebg;
                         }
                     }
                 }

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { selectSettings } from '../settings/settingsSlice';
 import './ProgressRing.scss';
 
 function ProgressRing(props: any) {
@@ -6,6 +7,8 @@ function ProgressRing(props: any) {
     const normalizedRadius = (radius - stroke * 2);
     const circumference = normalizedRadius * 2 * Math.PI;
     const strokeDashoffset = circumference - (progress / 100 * circumference);
+    const colors: any = {red: '#F87070', blue: '#70F3F8', purple: '#D881F8'};
+    const settings = useSelector(selectSettings);
 
     return (
         <svg
@@ -13,7 +16,7 @@ function ProgressRing(props: any) {
             width={radius * 2}
         >
             <circle
-                stroke="#F87070"
+                stroke={colors[settings.color]}
                 fill="transparent"
                 strokeWidth={stroke}
                 strokeDasharray={circumference + ' ' + circumference}

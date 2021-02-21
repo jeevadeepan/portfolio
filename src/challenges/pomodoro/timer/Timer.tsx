@@ -1,7 +1,8 @@
-import { time } from 'console';
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useInterval } from '../../../hooks';
 import ProgressRing from '../progressring/ProgressRing';
+import { selectSettings } from '../settings/settingsSlice';
 import './Timer.scss';
 
 enum TimerState {
@@ -9,25 +10,38 @@ enum TimerState {
 }
 
 type TimerProps = {
-  time: number
+  time: string
 };
 
 function Timer(props: TimerProps) {
+  const settings = useSelector(selectSettings);
   const [elapsedTime, setElapsedTime] = useState(0);
   const [currState, setCurrState] = useState(TimerState.ready);
   const [startTime, setStartTime] = useState<number|any>();
-  const [minRem, setMinRem] = useState(props.time);
+  const [minRem, setMinRem] = useState(settings[props.time]);
   const [secRem, setSecRem] = useState(0);
   const [triggerBtn, setTriggerBtn] = useState('start');
   const [pauseStart, setPauseStart] = useState<any>();
   const [breakTime, setBreakTime] = useState<any>(0);
-  const [totalTime, setTotalTime] = useState(props.time * 60);
+  const [totalTime, setTotalTime] = useState(settings[props.time] * 60);
 
   const timeChecker = () => {
     const dt = (Date.now() - startTime - breakTime);
     const elapsed = Math.floor( dt/ 1000);
     setElapsedTime(elapsed);
   };
+
+  useEffect(() => {
+    if(totalTime !== (settings[props.time] * 60)) {
+      setElapsedTime(0);
+      setCurrState(TimerState.ready);
+      setMinRem(settings[props.time]);
+      setSecRem(0);
+      setTriggerBtn('start');
+      setBreakTime(0);
+      setTotalTime(settings[props.time] * 60);
+    }
+  }, [settings, props.time, totalTime]);
 
   useInterval(timeChecker, currState === TimerState.running ? 1000 : null);
   // start, stop
@@ -65,7 +79,7 @@ function Timer(props: TimerProps) {
       setMinRem(min);
       setSecRem(sec);
     }
-  }, [elapsedTime, currState]);
+  }, [elapsedTime, currState, totalTime]);
 
   return (
     <div className="timer">

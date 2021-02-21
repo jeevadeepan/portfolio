@@ -1,0 +1,11 @@
+@mixin themebg {
+    &.red {
+        background-color: #F87070
+    }
+    &.blue {
+        background-color: #70F3F8
+    }
+    &.purple {
+        background-color: #D881F8
+    }
+}
