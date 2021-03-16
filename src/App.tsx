@@ -6,6 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import './App.scss';
+import PhotosnapApp from './challenges/photosnap/PhotosnapApp';
 import PomodoroApp from './challenges/pomodoro/PomodoroApp';
 
 function App() {
@@ -16,11 +17,17 @@ function App() {
           <Route path="/pomodoro">
             <PomodoroApp />
           </Route>
+          <Route path="/photosnap">
+            <PhotosnapApp />
+          </Route>
           <Route path="/">
             <nav>
               <ul>
                 <li>
                   <Link to="/pomodoro">Pomodoro counter</Link>
+                </li>
+                <li>
+                  <Link to="/photosnap">Photosnap</Link>
                 </li>
               </ul>
             </nav>

@@ -1,0 +1,25 @@
+@import "ps_variables";
+
+#ps-highlights {
+    display: flex;
+    flex-direction: column;
+
+    .highlights-row {
+        display: flex;
+        .highlight-card {
+            width: 610px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            &:nth-child(odd) {
+                background-color: $black;
+                color: $white;
+            }
+        }
+    
+        img {
+            flex: 1
+        }
+    }
+}

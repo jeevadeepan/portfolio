@@ -1,0 +1,62 @@
+@import "ps_variables";
+@font-face {
+    font-family: "dm sans";
+    src: url("./assets/font/DMSans-Regular.ttf") format("truetype"),
+        url("./assets/font/DMSans-Bold.ttf") format("truetype");
+}
+
+#ps-app {
+    font-family: "dm sans", sans-serif;
+    color: $black;
+    font-size: $font-size-sm;
+    max-width: 1440px;
+    margin: 0 auto;
+    header {
+        display: flex;
+        justify-content: space-around;
+        padding: 1.33rem;
+        align-items: center;
+    }
+    nav {
+        ul {
+            display: flex;
+            li.ps-nav-link {
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                margin-right: 3.083rem;
+            }
+        }
+    }
+    .ps-btn {
+        font-size: $font-size-sm;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        border: none;
+        cursor: pointer;
+        &-primary {
+            background-color: $black;
+            color: $white;
+            &:hover {
+                background-color: $lightgrey;
+                color: $black;
+            }
+            &-light {
+                background-color: $white;
+                color: $black;
+            }
+        }
+        &-secondary {
+            background-color: transparent;
+            color: $black;
+            &:hover {
+                text-decoration: underline;
+            }
+            &-light {
+                color: $white;
+                background-color: $black;
+            }
+        }
+    }
+}
