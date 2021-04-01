@@ -50,12 +50,14 @@
         &-secondary {
             background-color: transparent;
             color: $black;
+            padding-left: 0;
             &:hover {
                 text-decoration: underline;
             }
             &-light {
                 color: $white;
                 background-color: $black;
+                padding-left: 0;
             }
         }
     }
