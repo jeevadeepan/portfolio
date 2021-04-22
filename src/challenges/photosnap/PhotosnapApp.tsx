@@ -8,7 +8,9 @@ import mountainImg from './assets/img/stories/desktop/mountains.jpg';
 import cityscapesImg from './assets/img/stories/desktop/cityscapes.jpg';
 import eighteendaysImg from './assets/img/stories/desktop/18-days-voyage.jpg';
 import architecturalsImg from './assets/img/stories/desktop/architecturals.jpg';
-import { create } from "domain";
+import {ReactComponent as Responsive} from './assets/img/features/desktop/responsive.svg';
+import {ReactComponent as NoLimit} from './assets/img/features/desktop/no-limit.svg';
+import {ReactComponent as Embed} from './assets/img/features/desktop/embed.svg';
 
 export default function PhotosnapApp() {
     return (
@@ -99,7 +101,21 @@ export default function PhotosnapApp() {
                 </section>
             </section>
             <section id="ps-features">
-                Features
+                <section className="feature-card">
+                    <Responsive />
+                    <div className="feature-title">100% Responsive</div>
+                    <p>No matter which the device you're on, our site is fully responsive and stories look beautiful on any screen.</p>
+                </section>
+                <section className="feature-card">
+                    <NoLimit />
+                    <div className="feature-title">No Photo Upload Limit</div>
+                    <p>Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.</p>
+                </section>
+                <section className="feature-card">
+                    <Embed />
+                    <div className="feature-title">Available to Embed</div>
+                    <p>Emnbed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps and more.</p>
+                </section>
             </section>
             <footer></footer>
         </div>
