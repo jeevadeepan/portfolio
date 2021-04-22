@@ -1,91 +1,113 @@
 @import "ps_variables";
 
 #ps-highlights {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    .highlights-row {
+  .highlights-row {
+    display: flex;
+    .highlight-card {
+      width: 610px;
+      display: flex;
+      justify-content: center;
+      &:nth-child(odd) {
+        background-color: $black;
+        color: $white;
+        p {
+          color: #fff9;
+        }
+      }
+      h1 {
+        font-size: 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 4.166px;
+        line-height: 3rem;
+      }
+      p {
+        color: #0009;
+        line-height: 25px;
+      }
+      .highlight-text {
+        max-width: 387px;
         display: flex;
-        .highlight-card {
-            width: 610px;
-            display: flex;
-            justify-content: center;
-            &:nth-child(odd) {
-                background-color: $black;
-                color: $white;
-                p {
-                    color: #fff9;
-                }
-            }
-            h1 {
-                font-size: 40px;
-                font-weight: bold;
-                text-transform: uppercase;
-                letter-spacing: 4.166px;
-                line-height: 3rem;
-            }
-            p {
-                color: #0009;
-                line-height: 25px;
-            }
-            .highlight-text {
-                max-width: 387px;
-                display: flex;
-                justify-content: center;
-                align-items: flex-start;
-                flex-direction: column;
-                &>* {
-                    margin: 1rem 0;
-                }
-            }
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        & > * {
+          margin: 1rem 0;
         }
-    
-        img {
-            flex: 1
-        }
+      }
     }
+
+    img {
+      flex: 1;
+    }
+  }
 }
 
 #ps-stories {
+  display: flex;
+  .story-card {
     display: flex;
-    .story-card {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        .story-content {
-            >* {
-                margin: 0 3.33rem;
-            }
-            p:first-child {
-                margin-bottom: 0.6rem;
-                font-weight: bold;
-                font-size: 18px;
-            }
-            color: $white;
-            position: absolute;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.27%, rgba(0, 0, 0, 0.661222) 100%);
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            .story-cta {
-                border-top: 1px solid rgba(255,255,255,0.25);
-                margin-top: 1.33rem;
-                span {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    button {
-                        background-color: transparent;
-                        flex-grow: 1;
-                        text-align: left;
-                    }
-                }
-            }
+    flex-direction: column;
+    position: relative;
+    bottom: 0;
+    transition: bottom 200ms ease;
+    cursor: pointer;
+    .story-content {
+      > * {
+        margin: 0 3.33rem;
+      }
+      p:first-child {
+        margin-bottom: 0.6rem;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      color: $white;
+      position: absolute;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.0001) 0.27%,
+        rgba(0, 0, 0, 0.661222) 100%
+      );
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      .story-cta {
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+        margin-top: 1.33rem;
+        span {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          button {
+            background-color: transparent;
+            flex-grow: 1;
+            text-align: left;
+          }
         }
-        justify-content: flex-end;
+      }
     }
+    justify-content: flex-end;
+    &:hover {
+      bottom: 1.5rem;
+      &:after {
+        content: "";
+        width: 100%;
+        height: 6px;
+        position: absolute;
+        background: linear-gradient(
+          26.57deg,
+          #ffc593 0%,
+          #bc7198 43.29%,
+          #5a77ff 83.33%
+        );
+      }
+    }
+  }
 }
 
 #ps-features{
