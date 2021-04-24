@@ -5,6 +5,15 @@
         url("./assets/font/DMSans-Bold.ttf") format("truetype");
 }
 
+@mixin logo($color: #000000) {
+    text-decoration: none;
+    color: $color;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
 #ps-app {
     font-family: "dm sans", sans-serif;
     color: $black;
@@ -16,6 +25,12 @@
         justify-content: space-around;
         padding: 1.33rem;
         align-items: center;
+        .ps-app-title {
+            @include logo();
+            svg {
+                margin-right: 5px;
+            }
+        }
     }
     nav {
         ul {
@@ -58,6 +73,16 @@
                 color: $white;
                 background-color: $black;
                 padding-left: 0;
+            }
+        }
+    }
+    footer {
+        background-color: #000000;
+        color: #ffffff;
+        .ps-app-title {
+            @include logo($white);
+            svg {
+                margin-right: 5px;
             }
         }
     }

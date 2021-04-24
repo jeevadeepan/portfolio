@@ -11,12 +11,13 @@ import architecturalsImg from './assets/img/stories/desktop/architecturals.jpg';
 import {ReactComponent as Responsive} from './assets/img/features/desktop/responsive.svg';
 import {ReactComponent as NoLimit} from './assets/img/features/desktop/no-limit.svg';
 import {ReactComponent as Embed} from './assets/img/features/desktop/embed.svg';
+import Logo from "./components/Logo";
 
 export default function PhotosnapApp() {
     return (
         <div id='ps-app'>
             <header>
-                <a href="/" id='ps-app-title'>Photosnap</a>
+                <a href="/" className='ps-app-title'><Logo />Photosnap</a>
                 <nav>
                     <ul>
                         <li className="ps-nav-link">Stories</li>
@@ -117,7 +118,18 @@ export default function PhotosnapApp() {
                     <p>Emnbed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps and more.</p>
                 </section>
             </section>
-            <footer></footer>
+            <footer>
+                <a href="/" className='ps-app-title'><Logo />Photosnap</a>
+                <nav>
+                    <ul>
+                        <li className="ps-nav-link">Home</li>
+                        <li className="ps-nav-link">Stories</li>
+                        <li className="ps-nav-link">Features</li>
+                        <li className="ps-nav-link">Pricing</li>
+                    </ul>
+                </nav>
+                <PsButton text='Get an Invite' type='primary' />
+            </footer>
         </div>
     );
 }
