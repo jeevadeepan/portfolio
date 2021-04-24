@@ -12,6 +12,7 @@ import {ReactComponent as Responsive} from './assets/img/features/desktop/respon
 import {ReactComponent as NoLimit} from './assets/img/features/desktop/no-limit.svg';
 import {ReactComponent as Embed} from './assets/img/features/desktop/embed.svg';
 import Logo from "./components/Logo";
+import Footer from "./components/Footer/Footer";
 
 export default function PhotosnapApp() {
     return (
@@ -118,18 +119,7 @@ export default function PhotosnapApp() {
                     <p>Emnbed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps and more.</p>
                 </section>
             </section>
-            <footer>
-                <a href="/" className='ps-app-title'><Logo />Photosnap</a>
-                <nav>
-                    <ul>
-                        <li className="ps-nav-link">Home</li>
-                        <li className="ps-nav-link">Stories</li>
-                        <li className="ps-nav-link">Features</li>
-                        <li className="ps-nav-link">Pricing</li>
-                    </ul>
-                </nav>
-                <PsButton text='Get an Invite' type='primary' />
-            </footer>
+            <Footer />
         </div>
     );
 }

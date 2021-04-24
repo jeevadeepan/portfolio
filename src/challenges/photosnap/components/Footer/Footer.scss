@@ -1,0 +1,35 @@
+@import "../../ps_variables";
+#ps-app {
+    footer {
+        .social-icons {
+            svg {
+                cursor: pointer;
+                &.youtube-ico:hover {
+                    path {
+                        fill: url(#yt);
+                    }
+                }
+                &.facebook-ico:hover {
+                    path {
+                        fill: url(#fb);
+                    }
+                }
+                &.instagram-ico:hover {
+                    path {
+                        fill: url(#in);
+                    }
+                }
+                &.pinterest-ico:hover {
+                    path {
+                        fill: url(#pn);
+                    }
+                }
+                &.twitter-ico:hover {
+                    path {
+                        fill: url(#tw);
+                    }
+                }
+            }
+        }
+    }
+}
