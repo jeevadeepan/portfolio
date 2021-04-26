@@ -1,7 +1,27 @@
 @import "../../ps_variables";
 #ps-app {
     footer {
+        display: grid;
+        grid-column-gap: 2.1875rem;
+        display: grid;
+        grid-template-columns: repeat(12, 4.0625rem);
+        justify-content: center;
+        padding: 4rem 0;
+        .ps-app-title, .social-icons {
+            grid-column: 1 / span 3;
+        }
+        nav {
+            grid-column: 4 / span 6;
+            grid-row: 1 / span 4;
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+            }
+        }
         .social-icons {
+            grid-row: 2 / span 3;
             svg {
                 cursor: pointer;
                 &.youtube-ico:hover {
@@ -30,6 +50,13 @@
                     }
                 }
             }
+        }
+        .copyright {
+            font-size: 0.9375rem;
+            opacity: 0.5;
+        }
+        .copyright, >span {
+            grid-column : 10 / span 3;
         }
     }
 }

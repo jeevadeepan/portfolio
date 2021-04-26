@@ -29,6 +29,7 @@ export default function Footer(props: any) {
                     </ul>
                 </nav>
                 <PsButton text='Get an Invite' type='primary' />
+                <div className='copyright'>Copyright 2021. All Rights Reserved</div>
             </footer>
     );
 }
